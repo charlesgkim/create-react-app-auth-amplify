@@ -29,7 +29,8 @@
       var $  = require( 'jquery' );
       var dt = require( 'datatables.net' )();
 
-      $('#member').DataTable( {
+      $(document).ready(function() {
+        $('#member').DataTable( {
           serverSide: true,
           ajax: {
               url: 'https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/members',
@@ -42,8 +43,11 @@
                   return JSON.stringify( json ); // return JSON string
               }
           }
+        } );
       } );
     </script>
+
+
     <table id="member" class="display" style="width:100%">
         <thead>
             <tr>
