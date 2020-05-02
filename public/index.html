@@ -33,14 +33,18 @@
           "ajax": {
               "url": "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members",
               "dataSrc": "",
-              "dataFilter": function(data){
-                  var json = jQuery.parseJSON( data );
-                  json.recordsTotal = json.total;
-                  json.recordsFiltered = json.total;
-                  json.data = json.list;
-
-                  return JSON.stringify( json ); // return JSON string
-              }
+              //"mDataProp": ""
+              "columns": [
+                  { "data": "id" },
+                  { "data": "password" },
+                  { "data": "name" },
+                  { "data": "tel" },
+                  { "data": "mail" },
+                  { "data": "position" },
+                  { "data": "permission" },
+                  { "data": "leaves" },
+                  { "data": "note" }
+              ]
             }
         } );
       } );
