@@ -27,16 +27,17 @@
     <title>React Report App</title>
   </head>
   <body>
-    <script>
+    <script type="text/javascript" class="init">
       var $  = require( 'jquery' );
       var dt = require( 'datatables.net' )();
 
       $(document).ready(function() {
         $('#member').DataTable( {
-          serverSide: true,
-          ajax: {
-              url: 'https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/members',
-              dataFilter: function(data){
+          "serverSide": true,
+          "processing": true,
+          "ajax": {
+              "url": "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/members",
+              "dataFilter": function(data){
                   var json = jQuery.parseJSON( data );
                   json.recordsTotal = json.total;
                   json.recordsFiltered = json.total;
