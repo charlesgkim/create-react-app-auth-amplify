@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         $(document).ready(function() {
-          $('#member').DataTable( {
+          $('#member').DataTable({
             "ajax": {
                 "url": "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members",
                 "dataSrc": ""
@@ -27,7 +27,7 @@ class App extends Component {
               { "data": "leaves" },
               { "data": "note" }
             ]
-          });
+          })
         });
     
         <table id="member" class="display" style="width:100%">
