@@ -11,21 +11,7 @@ class App extends Component {
     return (
       <div className="App"> 
         <header className="App-header">
-          <table id="member" class="display" style="width:100%">
-            <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Password</th>
-                  <th>Name</th>
-                  <th>Tel</th>
-                  <th>Mail</th>
-                  <th>Position</th>
-                  <th>Permission</th>
-                  <th>Leaves</th>
-                  <th>Note</th>
-              </tr>
-            </thead>
-          </table>
+          <pre>Learn React</pre>
         </header>
       </div>
     );
