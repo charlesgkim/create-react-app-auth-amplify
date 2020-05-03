@@ -10,9 +10,10 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-        <table id="member" class="display" style="width:100%">
-          <thead>
-              <tr>
+        <header className="App-header">
+          <table id="member" class="display" style="width:100%">
+            <thead>
+                <tr>
                   <th>ID</th>
                   <th>Password</th>
                   <th>Name</th>
@@ -23,8 +24,9 @@ class App extends Component {
                   <th>Leaves</th>
                   <th>Note</th>
               </tr>
-          </thead>
-        </table>
+            </thead>
+          </table>
+        </header>
       </div>
     );
   }
