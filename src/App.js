@@ -8,6 +8,9 @@ import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
+let elem = document.createElement('div');
+document.body.appendChild(elem);
+
 $(document).ready(function() {
   $('#member').DataTable({
     "ajax": {
@@ -32,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-          <table id="member" class="display" style="width:100%">
+          <table id="member" class="display" style="width:100%" ref={elem=>$(elem).DataTable()}>
               <thead>
                   <tr>
                       <th>ID</th>
