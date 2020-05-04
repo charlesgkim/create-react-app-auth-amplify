@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
-import 'datatables.net';
+import {Tbl} from './Tbl';
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
@@ -35,21 +34,12 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-          <table id="member" class="display" style="width:100%" ref={elem=>$(elem).DataTable()}>
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Password</th>
-                      <th>Name</th>
-                      <th>Tel</th>
-                      <th>Mail</th>
-                      <th>Position</th>
-                      <th>Permission</th>
-                      <th>Leaves</th>
-                      <th>Note</th>
-                  </tr>
-              </thead>
-          </table>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">React withe jquery datatable.net</h1>
+        </header>
+        <Tbl data="">
+        </Tbl>      
       </div>
     );
   }
