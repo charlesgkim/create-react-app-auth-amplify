@@ -8,6 +8,16 @@ import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
+  state = {
+    loading: true,
+    dataSet: null
+  }
+  async componentDidMount () {
+    const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState( {dataSet: data} );
+  }
   render() {
     return (
       <div className="App"> 
@@ -15,13 +25,18 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">React with jquery datatable.net</h1>
         </header>
-        <Tbl data={this.dataSet}>
+        <div>
+          {this.state.loading || !this.state.dataSet ? (
+           <div>loading...</div>
+            ) : (
+           <div>dataSet..</div>
+          )}
+        </div>      
+        <Tbl data={this.state.dataSet}>
         </Tbl>      
       </div>
     );
   }
-  
-  dataSet = [["Joshua","londonubf!23","Joshua Kim","07710 168455","JoshuaKim@sekyee.co.uk","Director","3","3/20",""]]
 }
 
 export default withAuthenticator(App, true);
