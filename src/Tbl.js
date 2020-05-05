@@ -11,15 +11,15 @@ export class Tbl extends Component {
     this.$el.DataTable({
       data: this.props.data,
       columns: [
-        { title: "id" },
-        { title: "password" },
-        { title: "name" },
-        { title: "tel" },
-        { title: "mail" },
-        { title: "position" },
-        { title: "permission" },
-        { title: "leaves" },
-        { title: "note" }
+        { "data": "id" },
+        { "data": "password" },
+        { "data": "name" },
+        { "data": "tel" },
+        { "data": "mail" },
+        { "data": "position" },
+        { "data": "permission" },
+        { "data": "leaves" },
+        { "data": "note" }
       ]})    
   }
   componentWillUnmount() {
