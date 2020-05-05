@@ -29,7 +29,7 @@ class App extends Component {
           {this.state.loading || !this.state.dataSet ? (
            <div>loading...</div>
             ) : (
-           <div>dataSet..</div>
+           <div>{this.state.dataSet}</div>
           )}
         </div>      
         <Tbl data={this.state.dataSet}>
