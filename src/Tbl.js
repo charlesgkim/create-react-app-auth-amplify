@@ -26,6 +26,8 @@ export class Tbl extends Component {
   }
   render() {
     return <div>
+      <table className="display" width="100%" ref={el => this.el = el}>
+      </table>
     </div>
   }
 }
