@@ -11,7 +11,7 @@ export class Tbl extends Component {
     this.$el.DataTable({
       data: this.props.data,
       columns: [
-        { data": "id" },
+        { data: "id" },
         { data: "password" },
         { data: "name" },
         { data: "tel" },
