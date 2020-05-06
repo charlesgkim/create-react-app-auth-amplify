@@ -10,13 +10,21 @@ Amplify.configure(aws_exports);
 class App extends Component {
   state = {
     loading: true,
-    dataSet: null
+    jsonData: []
   }
-  async componentDidMount () {
-    const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members";
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState( {dataSet: data} );
+  componentDidMount () {
+      const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members"
+
+      fetch(url)
+      .then(response => response.json())
+      .then((jsonData) => {
+      // data is parsed json object received from url
+        this.setState({ jsonData })
+      })
+      .catch((error) => {
+      // handle your errors here
+      console.error(error)
+      })
   }
   render() {
     return (
@@ -26,13 +34,13 @@ class App extends Component {
           <h1 className="App-title">React with jquery datatable.net</h1>
         </header>
         <div>
-          {this.state.loading || !this.state.dataSet ? (
+          {this.state.loading || !this.state.jasonData ? (
            <div>loading...</div>
             ) : (
-           <div>{this.state.dataSet}</div>
+           <div>{this.state.jasonData}</div>
           )}
         </div>      
-        <Tbl data={this.state.dataSet}>
+        <Tbl data={this.state.jasonData}>
         </Tbl>      
       </div>
     );
