@@ -36,8 +36,7 @@ class App extends Component {
     return (
       <div className="App"> 
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React with jquery datatable.net</h1>
+          <h1 className="App-title">SEKYEE REPORT SYSTEM v2020</h1>
         </header>
         <div>
           { loading ? (
