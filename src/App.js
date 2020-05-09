@@ -35,9 +35,6 @@ class App extends Component {
     } = this.state;
     return (
       <div className="App"> 
-        <header className="App-header">
-          <h1 className="App-title">SEKYEE REPORT SYSTEM v2020</h1>
-        </header>
         <div>
           { loading ? (
            <div>loading...</div>
@@ -45,7 +42,10 @@ class App extends Component {
               <Tbl data={members}>
             </Tbl>      
           )}
-        </div>      
+        </div>
+        <header className="App-header">
+          <h1 className="App-title">SEKYEE REPORT SYSTEM v2020</h1>
+        </header>
       </div>
     );
   }
