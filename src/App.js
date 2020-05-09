@@ -14,7 +14,7 @@ class App extends Component {
     members: []
   }
   componentDidMount () {
-      const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members"
+      const url = ""
 
       fetch(url)
       .then(response => response.json())
