@@ -24,7 +24,7 @@ class App extends Component {
       })
       .catch((error) => {
         // handle your errors here
-        this.setState({ error, loading: false }
+        this.setState({ error, loading: false })
         console.error(error)
       })
   }
