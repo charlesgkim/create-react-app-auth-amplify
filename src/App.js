@@ -5,9 +5,15 @@ import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
+import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js';
+  
 Amplify.configure(aws_exports);
 
 class App extends Component {
+
+  const poolData = { UserPoolId: 'eu-west-2_NyUIOKaje', ClientId: 'v9sutffftmei0jsup5qjkmkd2' };
+  const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+  
   state = {
     loading: true,
     error: null,
