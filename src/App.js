@@ -11,8 +11,8 @@ Amplify.configure(aws_exports);
 
 class App extends Component {
 
-  const poolData = { UserPoolId: 'eu-west-2_NyUIOKaje', ClientId: 'v9sutffftmei0jsup5qjkmkd2' };
-  const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+  var poolData = { UserPoolId: 'eu-west-2_NyUIOKaje', ClientId: 'v9sutffftmei0jsup5qjkmkd2' };
+  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
   
   state = {
     loading: true,
