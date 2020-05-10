@@ -15,12 +15,8 @@ class App extends Component {
   state = {
     loading: true,
     error: null,
-    members: [],
-    poolData: {},
-    userPool: {}
+    members: []
   }
-  this.setState(poolData: { UserPoolId: "eu-west-2_NyUIOKaje", ClientId: "v9sutffftmei0jsup5qjkmkd2" });
-  this.setState(userPool: new AmazonCognitoIdentity.CognitoUserPool(this.state.poolData));
 
   componentDidMount () {
       const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members"
