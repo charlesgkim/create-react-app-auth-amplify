@@ -10,14 +10,17 @@ import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-  poolData = { UserPoolId: "eu-west-2_NyUIOKaje", ClientId: "v9sutffftmei0jsup5qjkmkd2" }
-  userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+
   
   state = {
     loading: true,
     error: null,
-    members: []
+    members: [],
+    poolData: {},
+    userPool: {}
   }
+  this.setState(poolData: { UserPoolId: "eu-west-2_NyUIOKaje", ClientId: "v9sutffftmei0jsup5qjkmkd2" });
+  this.setState(userPool: new AmazonCognitoIdentity.CognitoUserPool(this.state.poolData));
 
   componentDidMount () {
       const url = "https://0ik98nbwxb.execute-api.eu-west-2.amazonaws.com/dev/members"
