@@ -41,6 +41,7 @@ class App extends Component {
     
     var poolData = { UserPoolId: "eu-west-2_NyUIOKaje", ClientId: "v9sutffftmei0jsup5qjkmkd2" }
     var token = null;
+    var apigClientFactory = require('aws-api-gateway-client').default;
     var apiClient = apigClientFactory.newClient();
     var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
     userPool.getCurrentUser().getSession(function(err, session) { console.log(session.getIdToken().getJwtToken()); })
