@@ -38,6 +38,12 @@ class App extends Component {
         loading,
         members
     } = this.state;
+    
+    var poolData = { UserPoolId: "eu-west-2_NyUIOKaje", ClientId: "v9sutffftmei0jsup5qjkmkd2" }
+    var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+    userPool.getCurrentUser().getSession(function(err, session) { console.log(session.getIdToken().getJwtToken()); })
+    console.log(userPool);
+    
     return (
       <div className="App"> 
         <div>
