@@ -13,6 +13,7 @@ class App extends Component {
 
   var poolData = { UserPoolId: 'eu-west-2_NyUIOKaje', ClientId: 'v9sutffftmei0jsup5qjkmkd2' };
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+  console.log(userPool);
   
   state = {
     loading: true,
