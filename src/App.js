@@ -8,6 +8,7 @@ import aws_exports from './aws-exports';
 // import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js';
   
 Amplify.configure(aws_exports);
+
 Amplify.configure({
   API: {
     endpoints: [
