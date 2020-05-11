@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "amazon-cognito-identity-js": "latest",
     "aws-amplify": "^2.2.0",
     "aws-amplify-react": "^3.1.1",
-    "aws-api-gateway-client": "latest",
+    "aws-api-gateway-client": "^0.3.3",
     "aws-sdk": "latest",
-    "amazon-cognito-identity-js": "latest",
     "bootstrap": "^4.4.1",
     "datatables.net": "^1.10.20",
     "jquery": "^3.5.0",
